@@ -79,6 +79,7 @@ class LiveJournal
   def most_recent_update
     post_params = self.base_params.merge({
       'selecttype' => 'lastn',
+      'ver' => '1',
       'howmany' => 1,
     })    
     response = @server.call('LJ.XMLRPC.getevents', post_params)
